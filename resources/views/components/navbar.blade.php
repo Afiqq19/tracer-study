@@ -5,8 +5,8 @@
             {{-- Logo --}}
             <div class="flex items-center">
                 <a href="{{ route('landing') }}" class="flex items-center space-x-3 group">
-                    <div class="p-1.5 bg-slate-100 rounded-xl group-hover:scale-105 transition-transform" style="width: 42px; height: 42px;">
-                        <img src="{{ asset('images/logo.png') }}?v=5" alt="Logo SMK" class="w-full h-full object-contain">
+                    <div class="rounded-full bg-white p-0.5 ring-2 ring-slate-200/80 shadow-xs group-hover:scale-105 transition-transform overflow-hidden flex items-center justify-center" style="width: 42px; height: 42px;">
+                        <img src="{{ asset('images/logo.png') }}?v=6" alt="Logo SMK" class="w-full h-full object-cover rounded-full">
                     </div>
                     <div>
                         <span class="font-extrabold text-lg text-slate-900 tracking-tight block leading-tight group-hover:text-indigo-600 transition-colors">

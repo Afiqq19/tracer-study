@@ -4,8 +4,8 @@
 
     {{-- Logo --}}
     <div class="flex items-center gap-3 px-6 h-16 border-b border-gray-100">
-        <div class="flex items-center justify-center" style="width: 32px; height: 32px;">
-            <img src="{{ asset('images/logo.png') }}?v=5" alt="Logo" class="w-full h-full object-contain">
+        <div class="flex items-center justify-center rounded-full bg-white p-0.5 ring-1 ring-slate-200 shadow-xs overflow-hidden" style="width: 36px; height: 36px;">
+            <img src="{{ asset('images/logo.png') }}?v=6" alt="Logo" class="w-full h-full object-cover rounded-full">
         </div>
         <span class="font-bold text-lg text-gray-900 truncate">Tracer Study</span>
     </div>
