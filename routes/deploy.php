@@ -83,6 +83,44 @@ Route::get('/update-rahasia-tracerstudy', function () {
             </pre>";
 });
 
+// Alias untuk update rahasia (mendukung URL /update-rahasia-mss)
+Route::get('/update-rahasia-mss', function () {
+    return redirect('/update-rahasia-tracerstudy');
+});
+
+// Route Rahasia Pembuat Akun Admin Instan
+Route::get('/buat-akun-admin-mss', function () {
+    $email = 'projek.msyafiq19@gmail.com';
+    $password = 'rahasia123';
+    
+    $user = \App\Models\User::firstOrNew(['email' => $email]);
+    $user->name = 'Administrator Tracer Study MSS';
+    $user->password = \Illuminate\Support\Facades\Hash::make($password);
+    $user->role = 'admin';
+    $user->is_active = true;
+    $user->email_verified_at = now();
+    $user->save();
+
+    return "<h1 style='color:green;'>✅ Akun Admin Berhasil Dibuat / Diperbarui!</h1>
+            <div style='background:#f4f4f4;padding:15px;border-radius:8px;font-family:sans-serif;'>
+                <p><strong>Email:</strong> {$email}</p>
+                <p><strong>Password:</strong> {$password}</p>
+                <p><strong>Role:</strong> admin (Status: Aktif & Terverifikasi)</p>
+                <p style='margin-top:15px;'><a href='/login' style='background:#4f46e5;color:white;padding:10px 16px;text-decoration:none;border-radius:6px;font-weight:bold;'>👉 Menuju Halaman Login</a></p>
+            </div>";
+});
+
+// Route Rahasia Menjalankan Database Seeder
+Route::get('/seed-rahasia-mss', function () {
+    $repoDir = base_path();
+    $output = shell_exec("cd \"$repoDir\" && php artisan db:seed --force 2>&1");
+    
+    return "<h1 style='color:green;'>✅ Database Seeder Berhasil Dijalankan!</h1>
+            <pre style='background:#1e1e1e;color:#00ff00;padding:20px;border-radius:10px;overflow-x:auto;'>" 
+            . htmlspecialchars((string) $output) . 
+            "</pre>";
+});
+
 // Route pembantu penyedia file storage (menjamin file lampiran/logo selalu bisa dibuka tanpa 404)
 Route::get('storage/{path}', function ($path) {
     $candidates = [
