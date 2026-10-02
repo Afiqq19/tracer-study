@@ -27,7 +27,7 @@
 
         <div class="mb-8 text-center pt-2">
             <div class="inline-flex p-3 bg-gradient-to-b from-white to-slate-50 rounded-2xl shadow-md border border-slate-100 ring-4 ring-indigo-50/80 mb-4 transition-transform hover:scale-105 duration-300">
-                <img src="{{ asset('images/logo.png') }}?v=3" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-12 h-12 object-contain">
+                <img src="{{ asset('images/logo.png') }}?v=4" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-12 h-12 object-contain">
             </div>
             <div>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100 mb-2 shadow-xs">
