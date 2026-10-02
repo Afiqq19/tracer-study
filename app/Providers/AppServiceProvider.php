@@ -32,6 +32,21 @@ class AppServiceProvider extends ServiceProvider
                 ]);
         });
 
+        \Illuminate\Auth\Notifications\ResetPassword::toMailUsing(function (object $notifiable, string $token) {
+            $url = url(route('password.reset', [
+                'token' => $token,
+                'email' => $notifiable->getEmailForPasswordReset(),
+            ], false));
+
+            return (new \Illuminate\Notifications\Messages\MailMessage)
+                ->subject('Permintaan Reset Password Akun - SMK Swasta Budhi Darma Indrapura')
+                ->view('emails.reset-password', [
+                    'notifiable' => $notifiable,
+                    'url' => $url,
+                    'count' => config('auth.passwords.'.config('auth.defaults.passwords').'.expire', 60),
+                ]);
+        });
+
         \Illuminate\Support\Facades\Event::listen(
             \Illuminate\Auth\Events\Verified::class,
             function ($event) {
