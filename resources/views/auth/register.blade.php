@@ -484,25 +484,38 @@
                 this.errorMessage = '';
 
                 try {
-                    const response = await fetch('{{ route("check-nisn") }}', {
+                    const response = await fetch('/check-nisn', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                             'X-CSRF-TOKEN': '{{ csrf_token() }}'
                         },
                         body: JSON.stringify({ nisn: this.nisn })
                     });
                     
-                    const data = await response.json();
+                    const data = await response.json().catch(() => null);
                     
-                    if (data.success) {
+                    if (!response.ok) {
+                        if (data && data.message) {
+                            this.errorMessage = data.message;
+                        } else if (response.status === 419) {
+                            this.errorMessage = 'Sesi telah kedaluwarsa. Silakan refresh halaman dan coba lagi.';
+                        } else {
+                            this.errorMessage = 'Gagal memproses permintaan (Status: ' + response.status + ').';
+                        }
+                        return;
+                    }
+                    
+                    if (data && data.success) {
                         this.nama = data.nama;
                         this.step = 2;
                     } else {
-                        this.errorMessage = data.message;
+                        this.errorMessage = (data && data.message) ? data.message : 'NISN tidak terdaftar.';
                     }
                 } catch (error) {
-                    this.errorMessage = 'Terjadi kesalahan jaringan. Silakan coba lagi.';
+                    console.error('Fetch error:', error);
+                    this.errorMessage = 'Terjadi kesalahan jaringan. Silakan refresh halaman dan coba lagi.';
                 } finally {
                     this.isLoading = false;
                 }
