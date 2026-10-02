@@ -15,13 +15,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/update-rahasia-tracerstudy', function () {
     $repoDir = base_path(); // Alamat folder root Laravel di server
 
-    // AUTO-PATCH .env untuk Timezone
+    // AUTO-PATCH .env untuk Timezone & APP_NAME
     $envFile = base_path('.env');
     if (file_exists($envFile)) {
         $env = file_get_contents($envFile);
         $env = preg_replace('/^APP_TIMEZONE=.*/m', 'APP_TIMEZONE=Asia/Jakarta', $env);
+        $env = preg_replace('/^APP_NAME=.*/m', 'APP_NAME="Tracer Study SMK Swasta Dwitunggal 2 Tanjung Morawa"', $env);
         if (!str_contains($env, 'APP_TIMEZONE=')) {
             $env .= "\nAPP_TIMEZONE=Asia/Jakarta\n";
+        }
+        if (!str_contains($env, 'APP_NAME=')) {
+            $env .= "\nAPP_NAME=\"Tracer Study SMK Swasta Dwitunggal 2 Tanjung Morawa\"\n";
         }
         file_put_contents($envFile, $env);
     }

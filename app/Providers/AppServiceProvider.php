@@ -23,6 +23,17 @@ class AppServiceProvider extends ServiceProvider
             \Illuminate\Support\Facades\URL::forceScheme('https');
         }
 
+        \Illuminate\Auth\Notifications\VerifyEmail::createUrlUsing(function (object $notifiable) {
+            return \Illuminate\Support\Facades\URL::temporarySignedRoute(
+                'verification.verify',
+                \Illuminate\Support\Carbon::now()->addMinutes(10),
+                [
+                    'id' => $notifiable->getKey(),
+                    'hash' => sha1($notifiable->getEmailForVerification()),
+                ]
+            );
+        });
+
         \Illuminate\Auth\Notifications\VerifyEmail::toMailUsing(function (object $notifiable, string $url) {
             return (new \Illuminate\Notifications\Messages\MailMessage)
                 ->subject('Aktivasi Akun Alumni - SMK Swasta Dwitunggal 2 Tanjung Morawa')

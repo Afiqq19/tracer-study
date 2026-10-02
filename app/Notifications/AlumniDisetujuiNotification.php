@@ -37,12 +37,11 @@ class AlumniDisetujuiNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Selamat! Akun Tracer Study Anda Telah Disetujui')
-            ->greeting('Halo, ' . $this->alumni->nama . '!')
-            ->line('Kabar gembira! Pendaftaran akun Tracer Study Anda telah berhasil diverifikasi dan disetujui oleh Administrator sekolah.')
-            ->line('Akun Anda sekarang telah aktif sepenuhnya. Anda dapat masuk untuk mengakses layanan tracer study dan mengisi kuesioner alumni.')
-            ->action('Masuk ke Akun Sekarang', route('login'))
-            ->line('Terima kasih atas partisipasi Anda dalam membantu kemajuan sekolah kita!')
-            ->salutation("Salam hangat,\nTim Tracer Study Alumni SMK");
+            ->subject('Selamat! Akun Tracer Study Anda Telah Disetujui - SMK Swasta Dwitunggal 2 Tanjung Morawa')
+            ->view('emails.alumni-disetujui', [
+                'alumni' => $this->alumni,
+                'notifiable' => $notifiable,
+                'loginUrl' => route('login'),
+            ]);
     }
 }
