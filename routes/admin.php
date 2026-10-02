@@ -28,7 +28,8 @@ Route::middleware(['role:admin'])->group(function () {
         ->name('alumni.export');
     Route::get('/alumni/template', [\App\Http\Controllers\Admin\AlumniController::class, 'downloadTemplate'])
         ->name('alumni.template');
-    Route::resource('/alumni', \App\Http\Controllers\Admin\AlumniController::class);
+    Route::resource('/alumni', \App\Http\Controllers\Admin\AlumniController::class)
+        ->parameters(['alumni' => 'alumni']);
 
     // Kuesioner
     Route::resource('/kuesioner', \App\Http\Controllers\Admin\KuesionerController::class);
