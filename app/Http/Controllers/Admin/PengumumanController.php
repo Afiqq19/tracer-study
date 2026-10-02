@@ -30,8 +30,7 @@ class PengumumanController extends Controller
             'is_published' => 'boolean',
         ]);
 
-        $validated['penulis_id'] = Auth::id();
-        $validated['slug'] = Str::slug($validated['judul']) . '-' . time();
+        $validated['dibuat_oleh'] = Auth::id();
         
         if ($request->has('is_published')) {
             $validated['published_at'] = now();

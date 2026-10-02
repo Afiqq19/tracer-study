@@ -31,6 +31,14 @@ class Pengumuman extends Model
         return $this->belongsTo(User::class, 'dibuat_oleh');
     }
 
+    /**
+     * Relasi ke pembuat pengumuman (alias penulis).
+     */
+    public function penulis()
+    {
+        return $this->belongsTo(User::class, 'dibuat_oleh');
+    }
+
     // ========== SCOPES ==========
 
     /**
