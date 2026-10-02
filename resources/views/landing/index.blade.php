@@ -23,7 +23,7 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {{-- Logo Sekolah dengan Efek Elevated Glow --}}
         <div class="inline-flex p-4 bg-white/95 backdrop-blur-md rounded-3xl shadow-xl shadow-indigo-500/10 border border-slate-200/80 ring-8 ring-indigo-50/70 mb-8 transition-transform hover:scale-105 duration-300">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
+            <img src="{{ asset('images/logo.png') }}?v=3" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
         </div>
 
         {{-- Badge Status --}}

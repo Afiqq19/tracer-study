@@ -16,7 +16,7 @@
         {{-- Card Header & School Logo --}}
         <div class="text-center mb-6 pt-2">
             <div class="inline-flex p-3 bg-gradient-to-b from-white to-slate-50 rounded-2xl shadow-md border border-slate-100 ring-4 ring-blue-50/80 mb-4 transition-transform hover:scale-105 duration-300">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-14 h-14 object-contain">
+                <img src="{{ asset('images/logo.png') }}?v=3" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-14 h-14 object-contain">
             </div>
             <h2 class="text-2xl font-black text-slate-900 tracking-tight">
                 Lupa Password?
