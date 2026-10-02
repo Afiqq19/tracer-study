@@ -40,8 +40,9 @@
                     </div>
 
                     <div>
-                        <label for="tahun_lulus_id" class="block text-sm font-medium text-gray-700 mb-1">Tahun Lulus <span class="text-red-500">*</span></label>
-                        <select name="tahun_lulus_id" id="tahun_lulus_id" required class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                        <label for="tahun_lulus_id" class="block text-sm font-medium text-gray-700 mb-1">Tahun Lulus <span class="text-xs text-gray-400 font-normal">(Opsional)</span></label>
+                        <select name="tahun_lulus_id" id="tahun_lulus_id" class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                            <option value="">-- Belum Dipilih / Kosong --</option>
                             @foreach($tahunLulus as $tl)
                                 <option value="{{ $tl->id }}" {{ old('tahun_lulus_id', $alumni->tahun_lulus_id) == $tl->id ? 'selected' : '' }}>{{ $tl->tahun }}</option>
                             @endforeach
@@ -50,8 +51,9 @@
                     </div>
 
                     <div>
-                        <label for="jurusan_id" class="block text-sm font-medium text-gray-700 mb-1">Jurusan <span class="text-red-500">*</span></label>
-                        <select name="jurusan_id" id="jurusan_id" required class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                        <label for="jurusan_id" class="block text-sm font-medium text-gray-700 mb-1">Jurusan <span class="text-xs text-gray-400 font-normal">(Opsional)</span></label>
+                        <select name="jurusan_id" id="jurusan_id" class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500">
+                            <option value="">-- Belum Dipilih / Kosong --</option>
                             @foreach($jurusan as $j)
                                 <option value="{{ $j->id }}" {{ old('jurusan_id', $alumni->jurusan_id) == $j->id ? 'selected' : '' }}>{{ $j->kode }} - {{ $j->nama }}</option>
                             @endforeach

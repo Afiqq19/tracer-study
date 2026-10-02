@@ -36,9 +36,9 @@
 
             {{-- Tahun Lulus --}}
             <div>
-                <label for="tahun_lulus_id" class="block text-sm font-medium text-gray-700 mb-1">Tahun Lulus <span class="text-red-500">*</span></label>
-                <select name="tahun_lulus_id" id="tahun_lulus_id" required class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 @error('tahun_lulus_id') border-red-500 @enderror">
-                    <option value="" disabled selected>Pilih Tahun Lulus...</option>
+                <label for="tahun_lulus_id" class="block text-sm font-medium text-gray-700 mb-1">Tahun Lulus <span class="text-xs text-gray-400 font-normal">(Opsional)</span></label>
+                <select name="tahun_lulus_id" id="tahun_lulus_id" class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 @error('tahun_lulus_id') border-red-500 @enderror">
+                    <option value="" selected>Pilih Tahun Lulus (Opsional)...</option>
                     @foreach($tahunLulus as $tl)
                         <option value="{{ $tl->id }}" {{ old('tahun_lulus_id') == $tl->id ? 'selected' : '' }}>{{ $tl->tahun }}</option>
                     @endforeach
@@ -48,9 +48,9 @@
 
             {{-- Jurusan --}}
             <div>
-                <label for="jurusan_id" class="block text-sm font-medium text-gray-700 mb-1">Jurusan (Kompetensi Keahlian) <span class="text-red-500">*</span></label>
-                <select name="jurusan_id" id="jurusan_id" required class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 @error('jurusan_id') border-red-500 @enderror">
-                    <option value="" disabled selected>Pilih Jurusan...</option>
+                <label for="jurusan_id" class="block text-sm font-medium text-gray-700 mb-1">Jurusan (Kompetensi Keahlian) <span class="text-xs text-gray-400 font-normal">(Opsional)</span></label>
+                <select name="jurusan_id" id="jurusan_id" class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 @error('jurusan_id') border-red-500 @enderror">
+                    <option value="" selected>Pilih Jurusan (Opsional)...</option>
                     @foreach($jurusan as $j)
                         <option value="{{ $j->id }}" {{ old('jurusan_id') == $j->id ? 'selected' : '' }}>{{ $j->kode }} - {{ $j->nama }}</option>
                     @endforeach

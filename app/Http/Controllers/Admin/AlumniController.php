@@ -68,8 +68,8 @@ class AlumniController extends Controller
         $validated = $request->validate([
             'nisn' => 'required|digits:10|unique:alumni,nisn',
             'nama' => 'required|string|max:255',
-            'tahun_lulus_id' => 'required|exists:tahun_lulus,id',
-            'jurusan_id' => 'required|exists:jurusan,id',
+            'tahun_lulus_id' => 'nullable|exists:tahun_lulus,id',
+            'jurusan_id' => 'nullable|exists:jurusan,id',
         ]);
 
         $validated['status_registrasi'] = 'belum_daftar';
@@ -100,8 +100,8 @@ class AlumniController extends Controller
         $validated = $request->validate([
             'nisn' => ['required', 'digits:10', Rule::unique('alumni')->ignore($alumni->id)],
             'nama' => 'required|string|max:255',
-            'tahun_lulus_id' => 'required|exists:tahun_lulus,id',
-            'jurusan_id' => 'required|exists:jurusan,id',
+            'tahun_lulus_id' => 'nullable|exists:tahun_lulus,id',
+            'jurusan_id' => 'nullable|exists:jurusan,id',
             'jenis_kelamin' => 'nullable|in:Laki-laki,Perempuan',
             'tempat_lahir' => 'nullable|string|max:255',
             'tanggal_lahir' => 'nullable|date',
