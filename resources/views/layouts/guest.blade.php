@@ -34,7 +34,7 @@
     {{-- Footer --}}
     @if(request()->routeIs(['login', 'register', 'verification.*', 'menunggu.*', 'password.*']))
         <footer class="py-6 text-center text-xs text-slate-400 border-t border-slate-200/60 bg-white/60 backdrop-blur-md">
-            <p>&copy; {{ date('Y') }} SMK Swasta Budhi darma Indrapura &bull; Sistem Tracer Study Alumni</p>
+            <p>&copy; {{ date('Y') }} SMK Swasta Dwitunggal 2 Tanjung Morawa &bull; Sistem Tracer Study Alumni</p>
         </footer>
     @else
         <footer class="bg-slate-950 text-slate-400 border-t border-slate-800/80 relative overflow-hidden">
@@ -53,7 +53,7 @@
                                     Tracer Study
                                 </span>
                                 <span class="text-xs text-indigo-400 font-semibold tracking-wide block">
-                                    SMK Swasta Budhi darma Indrapura
+                                    SMK Swasta Dwitunggal 2 Tanjung Morawa
                                 </span>
                             </div>
                         </div>
@@ -84,11 +84,11 @@
                         <ul class="space-y-3.5 text-xs text-slate-400 leading-relaxed">
                             <li class="flex items-start gap-2.5">
                                 <svg class="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                <span>Jl. Datuk Umar Palangki, Tanah Merah, Kec. Air Putih, Indrapura, Kab. Batu Bara, Sumatera Utara</span>
+                                <span>Tanjung Morawa, Kab. Deli Serdang, Sumatera Utara</span>
                             </li>
                             <li class="flex items-center gap-2.5">
                                 <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                                <span>budhidarma5@gmail.com</span>
+                                <span>smkdwitunggal2@gmail.com</span>
                             </li>
                             <li class="flex items-center gap-2.5">
                                 <svg class="w-4 h-4 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="border-t border-slate-800/80 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-                    <p>&copy; {{ date('Y') }} SMK Swasta Budhi darma Indrapura &bull; Hak Cipta Dilindungi.</p>
+                    <p>&copy; {{ date('Y') }} SMK Swasta Dwitunggal 2 Tanjung Morawa &bull; Hak Cipta Dilindungi.</p>
                     <div class="flex items-center gap-4 text-xs text-slate-500">
                         <span class="inline-flex items-center gap-1">
                             <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>

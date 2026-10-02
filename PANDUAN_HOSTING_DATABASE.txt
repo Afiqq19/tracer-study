@@ -1,7 +1,7 @@
 ========================================================================
 PANDUAN LENGKAP HOSTING PROYEK (MODE DOCKER) & KONEKSI DATABASE MSS SERVER
 ========================================================================
-Diperbarui untuk: Tracer Study SMK Swasta Budhi Darma Indrapura - Port 9004 & Database mss-db
+Diperbarui untuk: Tracer Study SMK Swasta Dwitunggal 2 Tanjung Morawa - Port 9004 & Database mss-db
 
 Panduan ini mencakup langkah demi langkah meng-hosting proyek Laravel dari GitHub
 (https://github.com/Afiqq19/tracer-study.git) ke server Linux Toshiba menggunakan DOCKER,
@@ -55,7 +55,7 @@ LANGKAH 4: HUBUNGKAN KONEKSI DATABASE (.ENV)
    nano .env
 3. Sesuaikan konfigurasi database agar terhubung langsung ke wadah mss-db:
 
-   APP_NAME="Tracer Study SMK Swasta Budhi Darma Indrapura"
+   APP_NAME="Tracer Study SMK Swasta Dwitunggal 2 Tanjung Morawa"
    APP_ENV=production
    APP_DEBUG=false
    APP_URL=https://projek1.xie.my.id

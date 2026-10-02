@@ -27,7 +27,7 @@
         {{-- Card Header & School Logo --}}
         <div class="text-center mb-8 pt-2">
             <div class="inline-flex p-3 bg-gradient-to-b from-white to-slate-50 rounded-2xl shadow-md border border-slate-100 ring-4 ring-indigo-50/80 mb-4 transition-transform hover:scale-105 duration-300">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo SMK Swasta Budhi darma Indrapura" class="w-14 h-14 object-contain">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-14 h-14 object-contain">
             </div>
 
             <div>
@@ -36,7 +36,7 @@
                     Portal Tracer Study
                 </span>
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Selamat Datang</h1>
-                <p class="text-xs sm:text-sm text-slate-500 mt-1">SMK Swasta Budhi darma Indrapura</p>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">SMK Swasta Dwitunggal 2 Tanjung Morawa</p>
             </div>
         </div>
 

@@ -77,7 +77,7 @@
 
     {{-- Footer --}}
     <div class="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-500 flex items-center justify-center gap-2">
-        <span>© 2026 Tracer Study Alumni SMK Swasta Budhi darma Indrapura</span>
+        <span>© 2026 Tracer Study Alumni SMK Swasta Dwitunggal 2 Tanjung Morawa</span>
     </div>
 </div>
 @endsection

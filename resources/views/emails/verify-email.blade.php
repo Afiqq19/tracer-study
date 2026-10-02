@@ -17,7 +17,7 @@
                     <tr>
                         <td style="padding: 24px 30px; border-bottom: 2px solid #2563eb;">
                             <div style="font-size: 16px; font-weight: bold; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.5px;">
-                                SMK Swasta Budhi Darma Indrapura
+                                SMK Swasta Dwitunggal 2 Tanjung Morawa
                             </div>
                             <div style="font-size: 12px; color: #666666; margin-top: 3px;">
                                 Sistem Informasi Tracer Study Alumni
@@ -34,7 +34,7 @@
                             </p>
 
                             <p style="margin: 0 0 14px 0; font-size: 14px; color: #444444; line-height: 1.6;">
-                                Terima kasih telah melakukan registrasi pada sistem <strong>Tracer Study SMK Swasta Budhi Darma Indrapura</strong>.
+                                Terima kasih telah melakukan registrasi pada sistem <strong>Tracer Study SMK Swasta Dwitunggal 2 Tanjung Morawa</strong>.
                             </p>
 
                             <p style="margin: 0 0 24px 0; font-size: 14px; color: #444444; line-height: 1.6;">
@@ -55,7 +55,7 @@
                             <div style="margin-top: 30px; font-size: 13px; color: #333333; line-height: 1.6;">
                                 Hormat kami,<br>
                                 <strong>Pengelola Tracer Study</strong><br>
-                                SMK Swasta Budhi Darma Indrapura
+                                SMK Swasta Dwitunggal 2 Tanjung Morawa
                             </div>
 
                             {{-- Link Alternatif --}}
@@ -70,8 +70,8 @@
                     {{-- Footer --}}
                     <tr>
                         <td style="padding: 16px 30px; background-color: #f9f9f9; border-top: 1px solid #eeeeee; font-size: 11px; color: #777777; text-align: center; line-height: 1.5;">
-                            <div style="font-weight: bold; color: #555555;">SMK Swasta Budhi Darma Indrapura</div>
-                            <div>Jl. Datuk Umar Palangki, Tanah Merah, Kec. Air Putih, Indrapura, Kab. Batu Bara, Sumatera Utara</div>
+                            <div style="font-weight: bold; color: #555555;">SMK Swasta Dwitunggal 2 Tanjung Morawa</div>
+                            <div>Tanjung Morawa, Kab. Deli Serdang, Sumatera Utara</div>
                             <div style="margin-top: 4px; color: #999999;">&copy; {{ date('Y') }} Tracer Study. Seluruh hak cipta dilindungi.</div>
                         </td>
                     </tr>

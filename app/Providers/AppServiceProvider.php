@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
 
         \Illuminate\Auth\Notifications\VerifyEmail::toMailUsing(function (object $notifiable, string $url) {
             return (new \Illuminate\Notifications\Messages\MailMessage)
-                ->subject('Aktivasi Akun Alumni - SMK Swasta Budhi Darma Indrapura')
+                ->subject('Aktivasi Akun Alumni - SMK Swasta Dwitunggal 2 Tanjung Morawa')
                 ->view('emails.verify-email', [
                     'notifiable' => $notifiable,
                     'url' => $url,
@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
             ], false));
 
             return (new \Illuminate\Notifications\Messages\MailMessage)
-                ->subject('Permintaan Reset Password Akun - SMK Swasta Budhi Darma Indrapura')
+                ->subject('Permintaan Reset Password Akun - SMK Swasta Dwitunggal 2 Tanjung Morawa')
                 ->view('emails.reset-password', [
                     'notifiable' => $notifiable,
                     'url' => $url,

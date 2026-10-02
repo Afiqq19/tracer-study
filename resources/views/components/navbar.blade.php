@@ -13,7 +13,7 @@
                             Tracer Study
                         </span>
                         <span class="text-[10px] text-slate-500 font-medium tracking-wide block">
-                            SMK Swasta Budhi darma Indrapura
+                            SMK Swasta Dwitunggal 2 Tanjung Morawa
                         </span>
                     </div>
                 </a>

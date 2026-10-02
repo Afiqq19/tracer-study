@@ -23,26 +23,26 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {{-- Logo Sekolah dengan Efek Elevated Glow --}}
         <div class="inline-flex p-4 bg-white/95 backdrop-blur-md rounded-3xl shadow-xl shadow-indigo-500/10 border border-slate-200/80 ring-8 ring-indigo-50/70 mb-8 transition-transform hover:scale-105 duration-300">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo SMK Swasta Budhi darma Indrapura" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo SMK Swasta Dwitunggal 2 Tanjung Morawa" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
         </div>
 
         {{-- Badge Status --}}
         <div>
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-indigo-100 shadow-xs text-indigo-700 text-xs sm:text-sm font-semibold mb-6">
                 <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
-                <span>Portal Tracer Study Resmi &bull; SMK Swasta Budhi darma Indrapura</span>
+                <span>Portal Tracer Study Resmi &bull; SMK Swasta Dwitunggal 2 Tanjung Morawa</span>
             </div>
         </div>
 
         {{-- Main Headline --}}
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6">
             Jejak Karir Gemilang <br class="hidden sm:inline">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600">Alumni Budhi Darma Indrapura</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600">Alumni Dwitunggal 2 Tanjung Morawa</span>
         </h1>
 
         {{-- Subtitle --}}
         <p class="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-            Sistem pelacakan karir terpadu untuk memetakan keterserapan kerja, mengukur relevansi pendidikan vokasi dengan industri, serta mempererat jejaring antar alumni SMK Swasta Budhi darma Indrapura.
+            Sistem pelacakan karir terpadu untuk memetakan keterserapan kerja, mengukur relevansi pendidikan vokasi dengan industri, serta mempererat jejaring antar alumni SMK Swasta Dwitunggal 2 Tanjung Morawa.
         </p>
 
         {{-- Tombol Aksi Utama --}}
@@ -87,7 +87,7 @@
                 📊 Data & Partisipasi
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Statistik Tracer Study</h2>
-            <p class="text-slate-500 text-sm sm:text-base mt-2">Gambaran terkini partisipasi alumni SMK Swasta Budhi darma Indrapura dalam pengisian kuesioner.</p>
+            <p class="text-slate-500 text-sm sm:text-base mt-2">Gambaran terkini partisipasi alumni SMK Swasta Dwitunggal 2 Tanjung Morawa dalam pengisian kuesioner.</p>
         </div>
 
         {{-- 3 Elevated Stat Cards --}}
@@ -258,7 +258,7 @@
                             <div class="w-3 h-3 rounded-full bg-amber-400"></div>
                             <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
                         </div>
-                        <span class="text-[11px] font-semibold text-slate-500">tracer-study.smkbudhidarma.sch.id</span>
+                        <span class="text-[11px] font-semibold text-slate-500">tracer-study.smkdwitunggal2.sch.id</span>
                         <div class="w-8"></div>
                     </div>
 

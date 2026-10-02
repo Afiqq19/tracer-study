@@ -51,7 +51,7 @@
 
     <div class="header">
         <h2>Laporan Data Alumni Tracer Study</h2>
-        <p>SMK Swasta Budhi darma Indrapura</p>
+        <p>SMK Swasta Dwitunggal 2 Tanjung Morawa</p>
     </div>
 
     <table>
