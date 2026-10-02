@@ -58,7 +58,7 @@ class UserController extends Controller
             unset($validated['password']);
         }
 
-        $validated['is_active'] = $request->has('is_active') ? (bool)$request->is_active : $user->is_active;
+        $validated['is_active'] = $request->boolean('is_active');
 
         $user->update($validated);
 

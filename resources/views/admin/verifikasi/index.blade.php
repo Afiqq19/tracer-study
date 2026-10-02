@@ -48,7 +48,14 @@
                         <td class="py-3 px-6 text-sm text-gray-800">
                             <span class="font-semibold">{{ $item->nama }}</span>
                             @if($item->user)
-                                <span class="block text-xs text-gray-500">{{ $item->user->email }}</span>
+                                <span class="block text-xs text-gray-500">
+                                    {{ $item->user->email }}
+                                    @if($item->user->hasVerifiedEmail())
+                                        <span class="text-green-600 font-semibold text-[11px] ml-1">✓ Email Terverifikasi</span>
+                                    @else
+                                        <span class="text-amber-600 font-semibold text-[11px] ml-1">⏳ Email Belum Verifikasi</span>
+                                    @endif
+                                </span>
                             @endif
                         </td>
                         <td class="py-3 px-6 text-sm text-gray-600">

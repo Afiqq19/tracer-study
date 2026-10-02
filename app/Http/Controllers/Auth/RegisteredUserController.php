@@ -137,6 +137,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'role' => 'alumni', // Default role untuk registrasi
+            'is_active' => false, // Akun belum aktif sampai email berhasil diverifikasi
         ]);
 
         // Link User to Alumni dan lengkapi data diri, lalu ubah status

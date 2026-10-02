@@ -35,10 +35,18 @@
                         @endif
                     </td>
                     <td class="py-3 px-6 text-sm">
-                        @if($user->is_active)
-                            <span class="text-green-600 font-medium">Aktif</span>
+                        @if($user->role === 'alumni' && !$user->hasVerifiedEmail())
+                            <span class="inline-flex px-2.5 py-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-full text-xs font-semibold">
+                                ⏳ Belum Verifikasi Email
+                            </span>
+                        @elseif($user->is_active)
+                            <span class="inline-flex px-2.5 py-1 bg-green-50 text-green-700 border border-green-200 rounded-full text-xs font-semibold">
+                                ✓ Aktif
+                            </span>
                         @else
-                            <span class="text-red-600 font-medium">Nonaktif</span>
+                            <span class="inline-flex px-2.5 py-1 bg-red-50 text-red-700 border border-red-200 rounded-full text-xs font-semibold">
+                                ✕ Nonaktif
+                            </span>
                         @endif
                     </td>
                     <td class="py-3 px-6 text-center">

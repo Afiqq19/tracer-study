@@ -31,5 +31,14 @@ class AppServiceProvider extends ServiceProvider
                     'url' => $url,
                 ]);
         });
+
+        \Illuminate\Support\Facades\Event::listen(
+            \Illuminate\Auth\Events\Verified::class,
+            function ($event) {
+                if (isset($event->user) && !$event->user->is_active) {
+                    $event->user->update(['is_active' => true]);
+                }
+            }
+        );
     }
 }

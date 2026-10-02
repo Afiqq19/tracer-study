@@ -18,8 +18,13 @@ class RoleMiddleware
             abort(403, 'Anda tidak memiliki akses ke halaman ini.');
         }
 
+        // Jika user alumni belum verifikasi email, arahkan ke halaman periksa email
+        if ($request->user()->role === 'alumni' && !$request->user()->hasVerifiedEmail()) {
+            return redirect()->route('verification.notice');
+        }
+
         if (!$request->user()->is_active) {
-            abort(403, 'Akun Anda telah dinonaktifkan. Hubungi admin.');
+            abort(403, 'Akun Anda telah dinonaktifkan oleh administrator sekolah.');
         }
 
         return $next($request);

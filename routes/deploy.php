@@ -56,6 +56,15 @@ Route::get('/update-rahasia-tracerstudy', function () {
     
     $output_dbseed = "DatabaseSeeder dilewati agar tidak duplicate data.";
       
+    // Sinkronisasi status akun alumni yang belum verifikasi email agar is_active = false
+    try {
+        \App\Models\User::whereNull('email_verified_at')
+            ->where('role', 'alumni')
+            ->update(['is_active' => false]);
+    } catch (\Throwable $e) {
+        // ignore jika tabel belum siap
+    }
+
     // 5. Jalankan clear cache & optimize (Penting untuk production!)
     $output_optimize = shell_exec("cd \"$repoDir\" && php artisan optimize:clear 2>&1 && php artisan optimize 2>&1");
     $output_link = shell_exec("cd \"$repoDir\" && php artisan storage:link --force 2>&1");
