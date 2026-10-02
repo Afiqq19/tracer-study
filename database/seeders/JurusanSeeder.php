@@ -22,7 +22,7 @@ class JurusanSeeder extends Seeder
         ];
 
         foreach ($jurusan as $j) {
-            Jurusan::create($j);
+            Jurusan::firstOrCreate(['kode' => $j['kode']], $j);
         }
     }
 }

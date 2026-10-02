@@ -15,7 +15,7 @@ class TahunLulusSeeder extends Seeder
         $currentYear = (int) date('Y');
 
         for ($year = $currentYear - 5; $year <= $currentYear; $year++) {
-            TahunLulus::create(['tahun' => $year]);
+            TahunLulus::firstOrCreate(['tahun' => $year]);
         }
     }
 }
