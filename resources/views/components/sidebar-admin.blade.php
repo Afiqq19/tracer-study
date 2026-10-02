@@ -5,7 +5,7 @@
     {{-- Logo --}}
     <div class="flex items-center gap-3 px-6 h-16 border-b border-gray-100">
         <div class="flex items-center justify-center" style="width: 32px; height: 32px;">
-            <img src="{{ asset('images/logo.png') }}?v=4" alt="Logo" class="w-full h-full object-contain">
+            <img src="{{ asset('images/logo.png') }}?v=5" alt="Logo" class="w-full h-full object-contain">
         </div>
         <span class="font-bold text-lg text-gray-900 truncate">Tracer Study</span>
     </div>

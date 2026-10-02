@@ -9,7 +9,7 @@
     <title>{{ config('app.name', 'Tracer Study') }} - @yield('title', 'Beranda')</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}?v=4">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}?v=5">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -46,7 +46,7 @@
                     <div class="md:col-span-2">
                         <div class="flex items-center space-x-3 mb-5">
                             <div class="p-2 bg-slate-900 rounded-xl border border-slate-800" style="width: 44px; height: 44px;">
-                                <img src="{{ asset('images/logo.png') }}?v=4" alt="Logo SMK" class="w-full h-full object-contain">
+                                <img src="{{ asset('images/logo.png') }}?v=5" alt="Logo SMK" class="w-full h-full object-contain">
                             </div>
                             <div>
                                 <span class="font-extrabold text-lg text-white tracking-tight block">
